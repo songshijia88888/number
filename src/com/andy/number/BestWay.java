@@ -2,7 +2,7 @@ package com.andy.number;
 
 public class BestWay {
 	private int[] target = {3, 5, 8, 9, 17, 26};
-	private int stopCount = 1;
+	private int stopCount = 3;
 	private int[] path = new int[stopCount];
 	public int[] getPath() {
 		return path;
