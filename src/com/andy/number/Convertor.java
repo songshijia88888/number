@@ -5,11 +5,23 @@ import java.util.HashMap;
 public class Convertor {
 	private static HashMap<String, Long> map = Constant.getHashMap();
 	
+	public static String chFormator(String ch){
+		String lastChar = ch.substring(ch.length() - 1, ch.length());
+		if(map.get(lastChar) > 9){
+			ch = ch + "¡„“ª";
+		}
+		else{
+			ch = ch + "“ª";
+		}
+		
+		return ch;
+	}
+	
 	public static Long ch2Arabic(String ch){
 		System.out.println(ch);
 		Long sumAll = 0l;
 		Long sumPart = 0l;
-		ch = ch + "“ª";
+		ch = chFormator(ch);
 		
 		for(int i = 0; i < ch.length() - 1;){
 			String c = ch.substring(i, i + 1);
